@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 20px;
+    background-color: orange;
+    height: 70px;
+}
+
+.mobile{
+    display: none;
+}
+ .navlinks{
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    list-style-type: none;
+ }
+ .navlinks li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+ }
+ .middle{
+    text-align: center;
+    padding-top: 40px;
+ }
+ .phone{
+    display: none;
+ }
+ 
+/* This is for mobile view */
+@media screen and (max-width:768px) {
+header{
+    /* background-color: orange; i comment these out because i had specified them in the desktop styling
+    width: 100%; */
+    padding: 30px;
+     height: auto;/* this was not there before. because i added height in the desktop
+    view, it will affect this one so i need to remove it */
+}
+ .mobile{
+     display: block; /* I added this style to show it in mobile view
+     it was on display none in the desktop  view. */
+ }
+.hamburger{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 18px;;
+}
+.close{
+    font-size:50px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 17px;
+    top: 5px;
+
+}
+.navlinks{
+display: flex;
+flex-direction: column;
+justify-content: center;
+display: block;
+list-style-type: none;
+width: 100%;
+line-height: 80px;
+min-height: 100vh;
+text-align: center;
+align-items: center;
+
+
+}
+ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+
+}
+.inactive{
+    display: none;
+}
+.active{
+    display: block;
+}
+.lapy{
+    display: none;
+}
+.phone{
+    display: block;
+}
+}
